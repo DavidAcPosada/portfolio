@@ -1,11 +1,14 @@
 import React from 'react';
-
+import Landing from './pages/Landing'
+import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import theme from './utils/config/theme';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Landing />
+    </ThemeProvider>
   );
 }
 
