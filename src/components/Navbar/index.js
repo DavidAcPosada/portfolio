@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import logo from './../../utils/assets/images/logo.svg'
 import { motion } from 'framer-motion';
 import Scrollspy from 'react-scrollspy';
@@ -21,7 +21,7 @@ const links = [
     }
 ]
 
-export default ({  }) => {
+export default () => {
     const classes = useStyles()
     const [current, setCurrent] = useState('none')
 
@@ -31,7 +31,7 @@ export default ({  }) => {
         <AppBar position='fixed' className={classes.appbar}>
             <Toolbar>
                 <div className={classes.logoContainer}>
-                    <img src={logo} className={classes.logo} />
+                    <img src={logo} className={classes.logo} alt='logo' />
                 </div>
                 <div>
                     <Scrollspy 
