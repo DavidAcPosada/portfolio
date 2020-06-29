@@ -7,6 +7,13 @@ export default makeStyles(theme => ({
         color: theme.palette.common.white,
         padding: `0px ${theme.spacing(10) * 2 }px`,
         display: 'flex',
+        [theme.breakpoints.down('md')]: {
+            padding: `0px ${theme.spacing(5) * 2 }px`,
+            paddingTop: theme.spacing(15) * 2
+        },
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column'
+        },
         '& > *': {
             display: 'flex',
             flexDirection: 'column',
@@ -19,6 +26,13 @@ export default makeStyles(theme => ({
     name: {
         fontSize: 130,
         lineHeight: '90px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 115,
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 95,
+            lineHeight: '70px'
+        }
     },
     append: {
         width: 100,
