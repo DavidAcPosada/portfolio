@@ -20,6 +20,10 @@ export default makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             padding: `0px ${theme.spacing(5) * 2 }px`,
             paddingTop: theme.spacing(3),
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: `0px ${theme.spacing(1) * 2 }px`,
+            paddingTop: theme.spacing(2),
         }
     },
     logoContainer: {
@@ -42,16 +46,14 @@ export default makeStyles(theme => ({
     overflow: {
         display: 'inline-block',
         overflow: 'hidden',
-        transform: 'translateY(-45%)',
+        transform: 'translateY(-25%)',
         marginLeft: 15,
-        [theme.breakpoints.down('sm')]: {
-            transform: 'translateY(-65%)',
-        }
     },
     name: {
         lineHeight: 1,
         transform: 'translateX(-100%)',
         fontSize: 35,
+        color: theme.palette.common.white,
         transition: theme.transitions.create('transform', {
             easing: theme.transitions.easing.easeIn,
             duration: theme.transitions.duration.leavingScreen

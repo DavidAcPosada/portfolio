@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import SmoothScroll from 'smooth-scroll';
+
+new SmoothScroll('a[href*="#"]', {
+  easing: 'easeInOutCubic'
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

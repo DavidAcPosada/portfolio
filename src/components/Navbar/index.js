@@ -69,7 +69,7 @@ export default () => {
         })
         return (
             <li key={item.id} className={linkClasses} onClick={() => setActive(false)}>
-                <a href={`#${item.id}`}>{ item.title }</a>
+                <a href={`#${item.id}`} data-scroll>{ item.title }</a>
                 <motion.span 
                     animate={current === item.id ? 'open' : 'closed'}
                     variants={variants}
@@ -87,12 +87,12 @@ export default () => {
     return (
         <AppBar position='fixed' className={appBarClasses}>
             <Toolbar>
-                <div className={classes.logoContainer}>
+                <a className={classes.logoContainer} href='#hero'>
                     <img src={logo} className={logoClasses} alt='logo' />
                     <div className={classes.overflow}>
                         <Typography variant='h3' className={nameClasses}>David Acevedo</Typography>
                     </div>
-                </div>
+                </a>
                 <div>
                     <Scrollspy 
                         items={['services', 'works', 'blog']}

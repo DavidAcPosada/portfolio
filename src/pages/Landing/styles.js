@@ -1,14 +1,21 @@
 import { makeStyles } from "@material-ui/core";
 
 export default makeStyles(theme => ({
-    hero: {
-        width: '100%',
-        height: '100vh',
-        color: theme.palette.common.white,
+    container: {
+        boxSizing: 'border-box'
+    },
+    section: {
         padding: `0px ${theme.spacing(10) * 2 }px`,
-        display: 'flex',
         [theme.breakpoints.down('md')]: {
             padding: `0px ${theme.spacing(5) * 2 }px`,
+        }
+    },
+    hero: {
+        width: '100%',
+        minHeight: '100vh',
+        color: theme.palette.common.white,
+        display: 'flex',
+        [theme.breakpoints.down('md')]: {
             paddingTop: theme.spacing(15) * 2
         },
         [theme.breakpoints.down('sm')]: {
@@ -55,19 +62,15 @@ export default makeStyles(theme => ({
     },
     lowColor: {
         color: 'rgba(255, 255, 255, 0.6)',
-    },  
-    subtitle: {
-        fontFamily: '"Roboto Mono", monospace',
-        fontSize: 18,
-        '&::before': {
-            content: '"-"',
-            marginRight: theme.spacing(2),
-            fontSize: 20
-        }
     },
-    role: {
+    sectionTitle: {
         fontSize: 38,
         lineHeight: '38px',
-        padding: `${theme.spacing(3)}px 0`
+        padding: `${theme.spacing(3)}px 0`,
+        color: theme.palette.common.white
+    },
+    contact: {
+        height: '80vh',
+        backgroundColor: theme.palette.secondary.main
     }
 }))

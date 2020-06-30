@@ -3,12 +3,12 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import useStyles from './styles';
 
-export default () => {
+export default ({ href = '#', text = '', icon = false }) => {
     const classes = useStyles();
 
     return (
-        <a href='#' className={classes.link}>
-            <span>My Story</span> <ArrowForwardIcon />
+        <a href={href} className={classes.link}>
+            <span>{ text }</span> {icon && <ArrowForwardIcon />}
         </a>
     )
 }

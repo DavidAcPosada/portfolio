@@ -63,6 +63,15 @@ export default createMuiTheme({
     }, 
     h3: {
       fontFamily: ['Grold', 'Roboto'].join(',')
+    },
+    subtitle1: {
+      fontFamily: '"Roboto Mono", monospace',
+        fontSize: 18,
+        '&::before': {
+            content: '"-"',
+            marginRight: 10,
+            fontSize: 20
+        }
     }
   },
   overrides: {
